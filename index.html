@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Conecta a la comunidad de El Mayo con oportunidades concretas para ayudar." />
+    <title>Ayuda del Mayo | Comunidad que se mueve</title>
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#inicio" aria-label="Ayuda del Mayo, inicio"><span class="brand-mark">+</span><span>Ayuda<br><b>del Mayo</b></span></a>
+      <nav aria-label="Navegación principal"><a href="#oportunidades">Oportunidades</a><a href="#como-ayudar">Cómo ayudar</a><button class="button button-dark" data-open-form>Publicar una oportunidad <span>↗</span></button></nav>
+    </header>
+
+    <main>
+      <section class="seccion-oportunidades" id="oportunidades">
+        <div class="section-heading">
+          <div><p class="eyebrow">Elige tu manera de participar</p><h2>Ayuda para afectados del huracán Polo</h2></div>
+          <a class="map-link" href="https://www.google.com/maps/search/El+Mayo" target="_blank" rel="noreferrer">Ver todo en el mapa <span>↗</span></a>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Categorías de ayuda">
+        <button class="tab active" data-category="todas" role="tab" aria-selected="true">
+            <span>✦</span>Todas</button>
+            
+          <button class="tab" data-category="donaciones" role="tab" aria-selected="false"><span>💰</span>Donaciones</button>
+          <button class="tab" data-category="voluntariado" role="tab" aria-selected="false"><span>✋</span>Voluntariado</button>
+          <button class="tab" data-category="busqueda" role="tab" aria-selected="false"><span>🔍</span>Búsqueda</button>
+                  <button class="tab" data-category="logistica" role="tab" aria-selected="false"><span>🚚</span>Logística</button>
+        </div>
+        <div class="barra-comunidad"><span id="estado-tareas">Hay <b id="contador-tareas">0</b> tareas activas para ayudar.</span><span id="mensaje-tareas" aria-live="polite"></span><button class="button button-reload" id="recargar-tareas" type="button" title="Recargar tareas">↻ <span>Recargar</span></button></div>
+        <div class="lista-tareas" id="lista-tareas"></div>
+      </section>
+
+    <!--  <section class="how-section" id="como-ayudar"><div><p class="eyebrow">No hay una sola forma</p><h2>Ayudar también es<br><em>estar presente.</em></h2></div><div class="how-steps"><article><span>01</span><h3>Encuentra</h3><p>Explora necesidades por tema y descubre cuál conecta contigo.</p></article><article><span>02</span><h3>Conecta</h3><p>Revisa el lugar, la fecha y lo que hace falta antes de sumarte.</p></article><article><span>03</span><h3>Comparte</h3><p>¿Conoces una necesidad? Publícala para que llegue a más personas.</p></article></div></section>
+-->
+</main>
+    <footer><a class="brand" href="#inicio"><span class="brand-mark">+</span><span>Ayuda <b>del Mayo</b></span></a><span>Hecho para cuidarnos entre todos.</span></footer>
+    <dialog id="opportunity-dialog"><button class="dialog-close" data-close-form aria-label="Cerrar">×</button><p class="eyebrow">Comparte con tu comunidad</p><h2>Publicar una tarea</h2><form id="opportunity-form"><label>Título de la tarea<input name="titulo" required placeholder="Ej. Recolección de ropa" /></label><label>¿En qué categoría?<select name="categoria" required><option value="donaciones">Donaciones</option><option value="voluntariado">Voluntariado</option><option value="busqueda">Búsqueda</option><option value="logistica">Logística</option></select></label><label>¿Cómo pueden ayudar?<textarea name="descripcion" required rows="3" placeholder="Cuenta brevemente qué se necesita..."></textarea></label><div class="form-row"><label>Lugar<input name="ubicacion" required placeholder="Ej. Centro comunitario" /></label><label>Fecha o horario<input name="fecha" required placeholder="Ej. Sábados, 10:00 h" /></label></div><button class="button button-coral" type="submit">Publicar tarea <span>↗</span></button></form></dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
